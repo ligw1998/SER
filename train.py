@@ -39,6 +39,7 @@ def train(args):
 
     ##########tarin model###########
 
+
     def init_weights(m):
         if type(m) == torch.nn.Linear:
             m.weight.data.normal_(0.0, 0.1)
@@ -59,5 +60,8 @@ def train(args):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--train_df', type=str)
+    parser.add_argument('--val_df', type=str)
+    parser.add_argument('--test_df',type=str)
+    parser.add_argument('--h5file',tpye=str)
     args = parser.parse_args()
     train(args)
