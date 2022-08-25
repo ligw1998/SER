@@ -54,7 +54,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data_dir', type=str)
+    parser.add_argument('--data_dir', type=str,default='/home/liguangwei/data/IEMOCAP_full_release')
     parser.add_argument('--df_file', type=str)
     parser.add_argument('--opt', type=str)
     parser.add_argument('--sr', type=int, default=16000)
